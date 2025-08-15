@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Binary_search;
 
 public class binary_search_704 {
     public int search(int[] nums, int target) {

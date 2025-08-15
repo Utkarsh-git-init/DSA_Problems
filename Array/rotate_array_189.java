@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class rotate_array_189 {
     public static void reverse(int[] nums,int begin,int end){

@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 import java.util.HashMap;
 

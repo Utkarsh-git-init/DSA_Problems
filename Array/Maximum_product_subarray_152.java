@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class Maximum_product_subarray_152 {
     public static int maxProduct(int[] nums) {

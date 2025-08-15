@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class move_zeroes_283 {
     public void moveZeroes(int[] nums) {

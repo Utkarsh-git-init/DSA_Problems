@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 import java.util.*;
 public class three_sum {
     public List<List<Integer>> threeSum(int[] nums) {

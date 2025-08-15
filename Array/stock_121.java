@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class stock_121 {
     public int maxProfit(int[] prices) {

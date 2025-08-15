@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class Rotate_Image_48 {
     public static void rotate(int[][] matrix) {

@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Binary_search;
 
 import java.util.Arrays;
 

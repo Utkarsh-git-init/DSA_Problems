@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class max_consecutive_ones_485 {
     public int findMaxConsecutiveOnes(int[] nums) {

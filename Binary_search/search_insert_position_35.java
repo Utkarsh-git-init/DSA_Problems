@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Binary_search;
 
 public class search_insert_position_35 {
     public static int searchInsert(int[] nums, int target) {

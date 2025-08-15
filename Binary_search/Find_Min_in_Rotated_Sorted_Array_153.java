@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Binary_search;
 
 public class Find_Min_in_Rotated_Sorted_Array_153 {
     public int findMin(int[] nums) {

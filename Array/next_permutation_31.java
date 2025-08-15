@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class next_permutation_31 {
     public static void quick(int arr[],int l,int h){

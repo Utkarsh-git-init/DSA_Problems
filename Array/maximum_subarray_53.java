@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class maximum_subarray_53 {
     public static int maxSubArray(int[] nums) {

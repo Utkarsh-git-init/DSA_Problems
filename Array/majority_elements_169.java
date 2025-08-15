@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class majority_elements_169 {
     public int majorityElement(int[] nums) {

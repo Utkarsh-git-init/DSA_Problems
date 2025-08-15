@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class Remove_Duplicates_Sorted_Array_26 {
     public int removeDuplicates(int[] nums) {

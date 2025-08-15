@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 import java.util.*;
 public class majority_element_II_229 {
     public List<Integer> majorityElement(int[] nums) {

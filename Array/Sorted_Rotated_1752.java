@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 
 public class Sorted_Rotated_1752 {
     public boolean check(int[] nums) {

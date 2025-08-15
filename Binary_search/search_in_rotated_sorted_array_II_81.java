@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Binary_search;
 
 public class search_in_rotated_sorted_array_II_81 {
     public boolean search(int[] nums, int target) {

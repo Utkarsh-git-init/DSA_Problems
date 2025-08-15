@@ -1,4 +1,4 @@
-package Strivers_dsa;
+package Strivers_dsa.Array;
 import java.util.*;
 public class pascal_triangle_118 {
     public static List<List<Integer>> generate(int numRows) {
