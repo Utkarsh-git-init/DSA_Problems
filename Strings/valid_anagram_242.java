@@ -2,7 +2,7 @@ package Strivers_dsa.Strings;
 
 import java.util.HashMap;
 
-public class valid_anagram {
+public class valid_anagram_242 {
     public boolean isAnagram(String s, String t) {
         if(s.length()!=t.length())
             return false;
