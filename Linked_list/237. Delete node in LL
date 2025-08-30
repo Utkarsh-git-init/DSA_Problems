@@ -1,0 +1,39 @@
+copy and paste to leetcode and run there
+
+solution 1-->
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public void deleteNode(ListNode node) {
+        while(node.next.next!=null){
+            node.val=node.next.val;
+            node=node.next;
+        }
+        node.val=node.next.val;
+        node.next=null;
+    }
+}
+
+
+
+solution 2-->
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public void deleteNode(ListNode node) {
+        node.val=node.next.val;
+        node.next=node.next.next;
+    }
+}
