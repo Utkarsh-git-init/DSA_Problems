@@ -1,0 +1,81 @@
+Solution 1-->
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ListNode prev=null;
+        ListNode curr=head;
+        List<Integer> list=new ArrayList<>();
+        while(curr!=null){
+            list.add(curr.val);
+            ListNode temp=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=temp;
+        }
+        curr=prev;
+        int i=0;
+        while(curr!=null){
+            if(curr.val!=list.get(i)){
+                return false;
+            }
+            i++;
+            curr=curr.next;
+        }
+        return true;
+    }
+}
+
+
+
+Solution 2 (better)-->
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        int length=0;
+        ListNode curr=head;
+        while(curr!=null){
+            length++;
+            curr=curr.next;
+        }
+        curr=head;
+        ListNode prev=null;
+        int i=1;
+        ListNode temp;
+        while(i<=length/2){
+            temp=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=temp;
+            i++;
+        }
+        if(length%2!=0){
+            curr=curr.next;
+        }
+        while(curr!=null){
+            if(curr.val!=prev.val){
+                return false;
+            }
+            curr=curr.next;
+            prev=prev.next;
+        }
+        return true;
+    }
+}
