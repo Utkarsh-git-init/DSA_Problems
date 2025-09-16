@@ -1,0 +1,56 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int carry=0;
+        ListNode itr1=l1,itr2=l2;
+        ListNode res=new ListNode();
+        ListNode resitr=res;
+        ListNode resprev=null;
+        while(itr1!=null&&itr2!=null){
+            int sum=itr1.val+itr2.val+carry;
+            resitr.val=sum%10;
+            resitr.next=new ListNode();
+            resprev=resitr;
+            resitr=resitr.next;
+            carry=sum/10;
+            itr1=itr1.next;
+            itr2=itr2.next;
+        }
+        if(itr1==null){
+            while(itr2!=null){
+            int sum=itr2.val+carry;
+            resitr.val=sum%10;
+            resitr.next=new ListNode();
+            resprev=resitr;
+            resitr=resitr.next;
+            carry=sum/10;
+            itr2=itr2.next;
+            }
+        }else if(itr2==null){
+            while(itr1!=null){
+            int sum=itr1.val+carry;
+            resitr.val=sum%10;
+            resitr.next=new ListNode();
+            resprev=resitr;
+            resitr=resitr.next;
+            carry=sum/10;
+            itr1=itr1.next;
+            }
+        }
+        if(carry==1){
+            resitr.val=1;
+        }else{
+            resprev.next=null;
+        }
+        return res;
+    }
+}
