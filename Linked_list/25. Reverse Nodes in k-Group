@@ -1,0 +1,46 @@
+//dry run the code to understand
+// solved and thought of handling edge cases later but didnt needed to
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode itr=head;
+        ListNode res=itr;// res=end of group one initialized for compile time error
+        int size=0;
+        while(itr!=null){
+            size++;
+            itr=itr.next;
+        }
+        int group=size/k;
+        itr=head;
+        ListNode curr_group=itr;
+        ListNode prev_group=itr;
+        ListNode prev;
+        ListNode temp;
+        for(int i=1;i<=group;i++){
+            curr_group=itr;
+            prev=itr;
+            itr=itr.next;
+            for(int j=2;j<=k;j++){
+                temp=itr.next;
+                itr.next=prev;
+                prev=itr;
+                itr=temp;
+            }
+            if(i==1)
+                res=prev;
+            prev_group.next=prev;
+            prev_group=curr_group;
+        }
+        prev_group.next=itr;
+        return res;
+    }
+}
