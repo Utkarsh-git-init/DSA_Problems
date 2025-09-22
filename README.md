@@ -9,6 +9,15 @@ Problems are from:
 ## 📂 Folder Structure
 Strivers_dsa/
 Strivers_dsa/
+
 │
+
 ├── Arrays/
+
 ├── Binary_search/
+
+├── Linked_list/
+
+├── Recursion/
+
+├── Strings/
