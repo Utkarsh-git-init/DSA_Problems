@@ -1,4 +1,4 @@
-# DSA Problems – Java Solutions
+# DSA Problems 
 
 This repository contains my solutions to various **Data Structures & Algorithms** problems, implemented in **Java**.  
 Problems are from:
@@ -19,5 +19,9 @@ Strivers_dsa/
 ├── Linked_list/
 
 ├── Recursion/
+
+├── SlidingWindowTwoPointer/
+
+├── Stack_and_Queue/
 
 ├── Strings/
