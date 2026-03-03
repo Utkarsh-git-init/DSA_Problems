@@ -4,13 +4,7 @@ import java.util.*;
 
 public class TaskScheduler621 {
     public int leastInterval(char[] tasks, int n) {
-        HashMap<Character,Integer> map=new HashMap<>();
-        for(char ch:tasks)
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        ArrayList<Character> characters = new ArrayList<>(map.keySet());
-        characters.sort(Comparator.comparingInt(map::get));
-        int count=0;
-        return count;
+        return 0;
     }
     static void main() {
         char[] tasks={'A','A','A','D','D','F','B','B','B','C'};
@@ -23,19 +17,19 @@ public class TaskScheduler621 {
 
 /*
 public int leastInterval(char[] tasks, int n) {
-        HashMap<Character,Integer> map=new HashMap<>();
+        HashMap<Character,Integer> followers=new HashMap<>();
         for(char ch:tasks)
-            map.put(ch,map.getOrDefault(ch,0)+1);
-        PriorityQueue<Character> priorityQueue=new PriorityQueue<>(Comparator.comparingInt(map::get).reversed());
-        priorityQueue.addAll(map.keySet());
+            followers.put(ch,followers.getOrDefault(ch,0)+1);
+        PriorityQueue<Character> priorityQueue=new PriorityQueue<>(Comparator.comparingInt(followers::get).reversed());
+        priorityQueue.addAll(followers.keySet());
         int count=0;
         Queue<Character> queue=new ArrayDeque<>();
-        while(!map.isEmpty()){
+        while(!followers.isEmpty()){
             Character temp=priorityQueue.poll();
             if(temp!=null) {
-                map.put(temp,map.get(temp)-1);
-                if(map.get(temp).equals(0)) {
-                    map.remove(temp);
+                followers.put(temp,followers.get(temp)-1);
+                if(followers.get(temp).equals(0)) {
+                    followers.remove(temp);
                     queue.offer(' ');
                 }
                 else
