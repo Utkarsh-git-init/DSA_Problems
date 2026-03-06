@@ -45,3 +45,28 @@ public class ValidParenthesisString678 {
         System.out.println(obj.checkValidString("*****((*(((((****"));
     }
 }
+/*
+Strivers solution
+public boolean checkValidString(String s) {
+        int min=0,max=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='('){
+                min++;
+                max++;
+            }
+            else if(s.charAt(i)==')'){
+                if(min!=0)
+                    min--;
+                max--;
+            }
+            else{
+                if(min==0)
+                    min--;
+                max++;
+            }
+            if(max==-1)
+                return false;
+        }
+        return min == 0;
+    }
+ */
