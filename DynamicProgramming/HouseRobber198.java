@@ -14,7 +14,7 @@ public class HouseRobber198 {
         return dp[i];
     }
     public int rob(int[] nums) {
-        int[] dp=new int[nums.length+1];
+        int[] dp=new int[nums.length];
         Arrays.fill(dp, -1);
         return Math.max(fun(nums,0,dp),fun(nums,1,dp));
     }

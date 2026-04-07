@@ -7,14 +7,17 @@ class Solution {
         Stack<TreeNode> stack=new Stack<>();
         List<Integer> list=new ArrayList<>();
         stack.push(root);
-        while(!stack.isEmpty()){
+        while(stack.peek()!=null)
+            stack.push(stack.peek().left);
+        stack.pop();
+        while (!stack.isEmpty()){
             TreeNode node=stack.pop();
-            if(node==null){
-                list.add(stack.pop().val);
-            }else{
+            list.add(node.val);
+            if(node.right!=null){
                 stack.push(node.right);
-                stack.push(node);
-                stack.push(node.left);
+                while (stack.peek()!=null)
+                    stack.push(stack.peek().left);
+                stack.pop();
             }
         }
         return list;
@@ -22,6 +25,9 @@ class Solution {
 }
 
 /*
+
+sol 1
+
 void traversal(List<Integer> list,TreeNode node){
         if(node==null)
             return;
@@ -35,9 +41,8 @@ void traversal(List<Integer> list,TreeNode node){
         return list;
     }
 
- */
+sol 2
 
-/*
 class Solution {
 
     public List<Integer> inorderTraversal(TreeNode root) {
@@ -60,6 +65,27 @@ class Solution {
                 list.add(node.val);
             }
             else {
+                stack.push(node.right);
+                stack.push(node);
+                stack.push(node.left);
+            }
+        }
+        return list;
+    }
+}
+
+sol 3
+
+class Solution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+        Stack<TreeNode> stack=new Stack<>();
+        List<Integer> list=new ArrayList<>();
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node=stack.pop();
+            if(node==null){
+                list.add(stack.pop().val);
+            }else{
                 stack.push(node.right);
                 stack.push(node);
                 stack.push(node.left);

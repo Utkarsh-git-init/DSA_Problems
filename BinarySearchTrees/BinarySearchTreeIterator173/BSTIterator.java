@@ -7,6 +7,33 @@ public class BSTIterator {
     public BSTIterator(TreeNode root) {
         stack=new Stack<>();
         stack.push(root);
+        while(stack.peek()!=null)
+            stack.push(stack.peek().left);
+        stack.pop();
+    }
+
+    public int next() {
+        TreeNode node=stack.pop();
+        stack.push(node.right);
+        while (stack.peek()!=null)
+            stack.push(stack.peek().left);
+        stack.pop();
+        return node.val;
+    }
+
+    public boolean hasNext() {
+        return stack.isEmpty();
+    }
+}
+
+/*
+sol 1
+
+public class BSTIterator {
+    Stack<TreeNode> stack;
+    public BSTIterator(TreeNode root) {
+        stack=new Stack<>();
+        stack.push(root);
         while(stack.peek()!=null){
             TreeNode node=stack.pop();
             stack.push(node.right);
@@ -40,3 +67,6 @@ public class BSTIterator {
         return false;
     }
 }
+
+
+ */
